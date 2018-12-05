@@ -22,6 +22,7 @@ public class TestController {
     public String test(HttpServletRequest request) {
         HttpSession session = request.getSession();
         System.out.println(session);
+        System.out.println(session.getId());
         return "test";
     }
 

@@ -27,7 +27,8 @@ public class NoSessionConfig {
             factory.addContextCustomizers(new TomcatContextCustomizer() {
                 @Override
                 public void customize(Context context) {
-                    context.setManager(new NoSessionManager());
+                    NoSessionManager manager = new NoSessionManager();
+                    context.setManager(manager);
                 }
             });
         }

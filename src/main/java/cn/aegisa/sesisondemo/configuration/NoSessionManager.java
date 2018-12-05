@@ -28,6 +28,11 @@ public class NoSessionManager extends ManagerBase {
     }
 
     @Override
+    protected String generateSessionId() {
+        return null;
+    }
+
+    @Override
     protected void startInternal() throws LifecycleException {
         super.startInternal();
         this.setState(LifecycleState.STARTING);
